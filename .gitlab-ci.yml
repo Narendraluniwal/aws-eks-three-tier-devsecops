@@ -31,7 +31,7 @@ plan:
     dependencies:
         - validate
     script:
-        -terraform plan -out=planfile
+        - terraform plan -out=planfile
     artifacts:
         paths:
             - planfile
