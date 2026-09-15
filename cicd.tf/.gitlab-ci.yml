@@ -12,7 +12,7 @@ variables:
 before_script:
     - terraform --version
     - terraform init
-
+    - cd cicd.tf
 
 
 stages:
