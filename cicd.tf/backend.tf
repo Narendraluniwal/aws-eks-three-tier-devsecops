@@ -3,6 +3,6 @@ terraform {
     bucket = "beabucket9799"
     key    = "state"
     region = "us-east-1"
-    dynamodb_table = "kira"
+    dynamodb_table = "backend"
   }
 }
