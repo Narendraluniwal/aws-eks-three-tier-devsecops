@@ -4,7 +4,7 @@ image:
     - '/usr/bin/env'
     - 'PATH=/usr/local/sbin:/usr/sbin/:/usr/bin:/sbin:/bin'
 
-varaibles:
+variables:
     AWS_ACCESS_KEY_ID: ${MY_AWS_ACCESS_KEY}
     AWS_SECRET_ACCESS_KEY: ${MY_SECRET_KEY}
     AWS_DEFAULT_REGION: "us-east-1"
@@ -24,27 +24,27 @@ stages:
 validate:
     stage: validate
     script: 
-        - terrsform validate
+        - terraform validate
 
 plan:
     stage: plan
-    dependecies:
-        -validate
+    dependencies:
+        - validate
     script:
-        -terraform plan -out=planfile
+        - terraform plan -out=planfile
     artifacts:
         paths:
             - planfile
 
 apply:
     stage: apply
-    dependecies:
+    dependencies:
         - plan
     script:
-        -terraform apply -input=false "planfile"
+        - terraform apply -input=false "planfile"
     when: manual
 destroy:
     stage: destroy
     script:
-        -terraform destroy -auto-approve
+        - terraform destroy -auto-approve
     when: manual
