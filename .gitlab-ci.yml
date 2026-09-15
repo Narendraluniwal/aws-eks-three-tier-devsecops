@@ -41,10 +41,10 @@ apply:
     dependencies:
         - plan
     script:
-        -terraform apply -input=false "planfile"
+        - terraform apply -input=false "planfile"
     when: manual
 destroy:
     stage: destroy
     script:
-        -terraform destroy -auto-approve
+        - terraform destroy -auto-approve
     when: manual
