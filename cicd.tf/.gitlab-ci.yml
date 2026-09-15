@@ -10,9 +10,10 @@ variables:
     AWS_DEFAULT_REGION: "us-east-1"
 
 before_script:
+    - cd cicd.tf
     - terraform --version
     - terraform init
-    - cd cicd.tf
+    
 
 
 stages:
