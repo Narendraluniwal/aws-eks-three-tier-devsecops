@@ -24,7 +24,7 @@ resource "aws_subnet" "pb_sn" {
 
 }
 
-resource "aws_security_group" "sg" {
+resource "aws_security_group" "pb_sg" {
     vpc_id = aws_vpc.myvpc.id
     name = "mysg"
     description = "public security"
