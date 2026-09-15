@@ -3,5 +3,5 @@ output "pb_sn" {
 }
 
 output "sg" { 
-    value = aws_security_group.sg.id
+    value = aws_security_group.pb_sg.id
 }
