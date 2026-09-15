@@ -32,8 +32,10 @@ plan:
     dependencies:
         - validate
     script:
-        - terraform plan
-
+        - terraform plan -out="planfile"
+    artifacts:
+        paths:
+            - planfile
 apply:
     stage: apply
     dependencies:
