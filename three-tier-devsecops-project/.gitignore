@@ -1,0 +1,18 @@
+*.terraform
+__pycache__
+.DS_Store
+*.sqlite3
+venv
+
+
+/jenkins-server-terraform/.terraform.lock.hcl
+/jenkins-server-terraform/.terraform
+
+notes.txt
+.pem
+# Never commit keys or credentials
+*.pem
+*.key
+*.tfvars
+.env
+.env.*
